@@ -48,8 +48,10 @@ void inputData(){
     Serial.print("Introduce ");
     Serial.print(values[i]);
     Serial.print(": ");
-    String input = Serial.readStringUntil("\n");
+    while (Serial.available() == 0);
+    String input = Serial.readStringUntil('\n');
     *vars[i] = input.toFloat();
+    while(Serial.available() > 0) Serial.read();
   }
 }
 
