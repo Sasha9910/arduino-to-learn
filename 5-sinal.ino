@@ -78,7 +78,7 @@ void setup() {
 
 // Function to generate the sinusoidal signal
 float matrixSensor ( float A, float w , float t, float Ao){
-   return A*sin(w*t) + Ao;
+  return A*sin(w*t) + Ao;
 
 }
 
